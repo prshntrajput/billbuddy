@@ -1,3 +1,10 @@
 import { Inngest } from "inngest";
+import { Resend } from "resend";
 
-export const inngest = new Inngest({ id: "billbuddy" });
+// Initialize the Inngest client
+export const inngest = new Inngest({
+  id: "billbuddy",
+  name: "BillBuddy",
+});
+
+export const resend = new Resend(process.env.RESEND_API_KEY);
